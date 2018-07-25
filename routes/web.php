@@ -1,5 +1,8 @@
 <?php
-Route::get('/', function () { return redirect('/admin/home'); });
+
+Route::get('/', 'HomeController@index');
+
+// Route::get('/', function () { return redirect('/admin/home'); });
 
 // Authentication Routes...
 $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
@@ -25,7 +28,7 @@ Route::get('login/{driver}', 'Auth\LoginController@redirectToSocial')->name('aut
 Route::get('{driver}/callback', 'Auth\LoginController@handleSocialCallback')->name('auth.login.social_callback');
 
 Route::group(['middleware' => ['auth', 'approved'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
-    Route::get('/home', 'HomeController@index');
+    Route::get('/home', 'HomeController@home');
     
     Route::resource('assets', 'Admin\AssetsController');
     Route::post('assets_mass_destroy', ['uses' => 'Admin\AssetsController@massDestroy', 'as' => 'assets.mass_destroy']);

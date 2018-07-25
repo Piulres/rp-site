@@ -69,7 +69,7 @@
                 </ul>
             </li>@endcan
             
-            @can('time_management_access')
+            <!-- @can('time_management_access')
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-clock-o"></i>
@@ -112,9 +112,9 @@
                     </li>@endcan
                     
                 </ul>
-            </li>@endcan
+            </li>@endcan -->
             
-            @can('task_management_access')
+            <!-- @can('task_management_access')
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-list"></i>
@@ -157,9 +157,9 @@
                     </li>@endcan
                     
                 </ul>
-            </li>@endcan
+            </li>@endcan -->
             
-            @can('assets_management_access')
+            <!-- @can('assets_management_access')
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-book"></i>
@@ -210,9 +210,9 @@
                     </li>@endcan
                     
                 </ul>
-            </li>@endcan
+            </li>@endcan -->
             
-            @can('expense_management_access')
+            <!-- @can('expense_management_access')
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-money"></i>
@@ -263,7 +263,7 @@
                     </li>@endcan
                     
                 </ul>
-            </li>@endcan
+            </li>@endcan -->
             
             @can('content_management_access')
             <li class="treeview">
@@ -384,7 +384,7 @@
                 </a>
             </li>@endcan
             
-            @can('contact_management_access')
+            <!-- @can('contact_management_access')
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-phone-square"></i>
@@ -411,9 +411,9 @@
                     </li>@endcan
                     
                 </ul>
-            </li>@endcan
+            </li>@endcan -->
             
-            @can('client_management_access')
+            <!-- @can('client_management_access')
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-briefcase"></i>
@@ -472,9 +472,9 @@
                     </li>@endcan
                     
                 </ul>
-            </li>@endcan
+            </li>@endcan -->
             
-            @can('client_management_setting_access')
+            <!-- @can('client_management_setting_access')
             <li class="treeview">
                 <a href="#">
                     <i class="fa fa-gears"></i>
@@ -525,7 +525,7 @@
                     </li>@endcan
                     
                 </ul>
-            </li>@endcan
+            </li>@endcan -->
             
 
             

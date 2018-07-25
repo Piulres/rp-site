@@ -14,7 +14,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // redirect to login screen if has no auth
+        // $this->middleware('auth');
     }
 
     /**
@@ -30,6 +31,19 @@ class HomeController extends Controller
         $timeentries = \App\TimeEntry::latest()->limit(5)->get(); 
         $contentpages = \App\ContentPage::latest()->limit(5)->get(); 
 
+        // return view('index', compact( 'teams', 'users', 'timeentries', 'contentpages' ));
+        return view('index', compact( 'teams', 'users', 'timeentries', 'contentpages' ));
+    }
+
+    public function home()
+    {
+        
+        $teams = \App\Team::latest()->limit(5)->get(); 
+        $users = \App\User::latest()->limit(5)->get(); 
+        $timeentries = \App\TimeEntry::latest()->limit(5)->get(); 
+        $contentpages = \App\ContentPage::latest()->limit(5)->get(); 
+
+        // return view('index', compact( 'teams', 'users', 'timeentries', 'contentpages' ));
         return view('home', compact( 'teams', 'users', 'timeentries', 'contentpages' ));
     }
 }
